@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 320" font-family="Sintony, sans-serif">
+  <rect width="560" height="320" fill="#f8f7f4"/>
+  <text x="280" y="26" text-anchor="middle" font-size="14" font-weight="700" fill="#2d2d2d">Planning Time vs. Path Quality</text>
+
+  <!-- Axes -->
+  <line x1="70" y1="270" x2="520" y2="270" stroke="#999" stroke-width="1.5"/>
+  <line x1="70" y1="30"  x2="70"  y2="270" stroke="#999" stroke-width="1.5"/>
+
+  <!-- Axis labels -->
+  <text x="295" y="300" text-anchor="middle" font-size="12" fill="#555">Planning Time (ms)</text>
+  <text x="20" y="155" text-anchor="middle" font-size="12" fill="#555" transform="rotate(-90,20,155)">Path Cost (norm.)</text>
+
+  <!-- X ticks -->
+  <g font-size="10" fill="#777" text-anchor="middle">
+    <text x="115" y="285">10</text>
+    <text x="205" y="285">50</text>
+    <text x="295" y="285">100</text>
+    <text x="385" y="285">500</text>
+    <text x="475" y="285">1000</text>
+  </g>
+  <!-- Y ticks -->
+  <g font-size="10" fill="#777" text-anchor="end">
+    <text x="62" y="270">0</text>
+    <text x="62" y="222">0.2</text>
+    <text x="62" y="174">0.4</text>
+    <text x="62" y="126">0.6</text>
+    <text x="62" y="78">0.8</text>
+    <text x="62" y="38">1.0</text>
+  </g>
+  <!-- Grid lines -->
+  <g stroke="#e8e6e2" stroke-width="1">
+    <line x1="70" y1="222" x2="520" y2="222"/>
+    <line x1="70" y1="174" x2="520" y2="174"/>
+    <line x1="70" y1="126" x2="520" y2="126"/>
+    <line x1="70" y1="78"  x2="520" y2="78"/>
+    <line x1="70" y1="30"  x2="520" y2="30"/>
+  </g>
+
+  <!-- RRT* curve (blue) -->
+  <polyline points="115,220 160,190 205,160 250,138 295,120 340,108 385,98 430,91 475,86"
+    fill="none" stroke="#2563eb" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#2563eb">
+    <circle cx="115" cy="220" r="4"/>
+    <circle cx="205" cy="160" r="4"/>
+    <circle cx="295" cy="120" r="4"/>
+    <circle cx="385" cy="98"  r="4"/>
+    <circle cx="475" cy="86"  r="4"/>
+  </g>
+
+  <!-- A* (green) — near-optimal quickly, flat -->
+  <polyline points="115,95 160,80 205,72 250,68 295,66 340,65 385,64 430,64 475,63"
+    fill="none" stroke="#059669" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#059669">
+    <circle cx="115" cy="95"  r="4"/>
+    <circle cx="205" cy="72"  r="4"/>
+    <circle cx="295" cy="66"  r="4"/>
+    <circle cx="385" cy="64"  r="4"/>
+    <circle cx="475" cy="63"  r="4"/>
+  </g>
+
+  <!-- RRT (rose) — random, plateaus high -->
+  <polyline points="115,230 160,215 205,205 250,200 295,196 340,193 385,191 430,190 475,189"
+    fill="none" stroke="#e8174a" stroke-width="2.5" stroke-linejoin="round"/>
+  <g fill="#e8174a">
+    <circle cx="115" cy="230" r="4"/>
+    <circle cx="205" cy="205" r="4"/>
+    <circle cx="295" cy="196" r="4"/>
+    <circle cx="385" cy="191" r="4"/>
+    <circle cx="475" cy="189" r="4"/>
+  </g>
+
+  <!-- Diffusion Policy (amber) -->
+  <polyline points="295,130 340,100 385,82 430,72 475,67"
+    fill="none" stroke="#d97706" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="6,3"/>
+  <g fill="#d97706">
+    <circle cx="295" cy="130" r="4"/>
+    <circle cx="385" cy="82"  r="4"/>
+    <circle cx="475" cy="67"  r="4"/>
+  </g>
+
+  <!-- Legend -->
+  <g font-size="11" fill="#333">
+    <line x1="280" y1="250" x2="300" y2="250" stroke="#2563eb" stroke-width="2.5"/>
+    <circle cx="290" cy="250" r="3.5" fill="#2563eb"/>
+    <text x="305" y="254">RRT*</text>
+
+    <line x1="340" y1="250" x2="360" y2="250" stroke="#059669" stroke-width="2.5"/>
+    <circle cx="350" cy="250" r="3.5" fill="#059669"/>
+    <text x="365" y="254">A*</text>
+
+    <line x1="390" y1="250" x2="410" y2="250" stroke="#e8174a" stroke-width="2.5"/>
+    <circle cx="400" cy="250" r="3.5" fill="#e8174a"/>
+    <text x="415" y="254">RRT</text>
+
+    <line x1="445" y1="250" x2="465" y2="250" stroke="#d97706" stroke-width="2.5" stroke-dasharray="4,2"/>
+    <circle cx="455" cy="250" r="3.5" fill="#d97706"/>
+    <text x="470" y="254">Diffusion</text>
+  </g>
+</svg>

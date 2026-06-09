@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="300" viewBox="0 0 450 300">
+  <rect width="450" height="300" fill="#9b51e0" opacity="0.12"/>
+  <rect width="450" height="300" fill="none" stroke="#9b51e0" stroke-opacity="0.3" stroke-width="2"/>
+  <g stroke="#9b51e0" stroke-width="2" fill="none" opacity="0.5">
+    <circle cx="225" cy="120" r="40"/>
+    <rect x="150" y="170" width="150" height="60" rx="8"/>
+    <line x1="225" y1="160" x2="225" y2="170"/>
+  </g>
+  <text x="225" y="270" font-family="sans-serif" font-size="20" fill="#9b51e0" text-anchor="middle" font-weight="bold">Manipulation</text>
+</svg>
